@@ -22,7 +22,7 @@ RSpec.describe "Todos API", type: :request do
     end
     # Test suite for GET /todos/:id
     describe "GET todos/:id" do
-        before { get "/todos/#{:todo_id}" }
+        before { get "/todos/#{todo_id}" }
 
         context "when the record exists" do
             it "returns the todo" do
@@ -39,7 +39,7 @@ RSpec.describe "Todos API", type: :request do
                 expect(response).to have_http_status(404)
             end
             it "returns a not found message" do
-                expect(response.body).to match(/Couldnt find TODO/)
+                expect(response.body).to match(/Couldn't find Todo/)
             end
         end
     end
@@ -69,20 +69,20 @@ RSpec.describe "Todos API", type: :request do
     # Test suite for PUT /todos/:id
 
     describe "PUT /todos/:id" do
-        let(:valid_attributes){{title: "Shopping"}}
+        let(:valid_attributes){{title: 'Shopping'}}
         context "when the record exists" do
-            before{put "/todos/#{todo_id}", params: valid_attributes}
+            before { put "/todos/#{todo_id}", params: valid_attributes }
             it "updates the record" do
                 expect(response.body).to be_empty
             end
             it "returns a status code 204" do
-                expect(response.body).to have_http_status(204)
+                expect(response).to have_http_status(204)
             end
         end
     end
     # Test suite for DELETE /todos/:id
     describe "DELETE /todos/:id" do
-        before{delete "/todos/#{:todo_id}"}
+        before{delete "/todos/#{todo_id}"}
         it "returns status code 204" do
             expect(response).to have_http_status(204)
         end
