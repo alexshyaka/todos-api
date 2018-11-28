@@ -1,4 +1,7 @@
 # README
+[![Build Status](https://travis-ci.org/alexshyaka/todos-api.svg?branch=master)](https://travis-ci.org/alexshyaka/todos-api)
+[![Coverage Status](https://coveralls.io/repos/github/alexshyaka/todos-api/badge.svg?branch=master)](https://coveralls.io/github/alexshyaka/todos-api?branch=master)
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/alexshyaka/todos-api)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
